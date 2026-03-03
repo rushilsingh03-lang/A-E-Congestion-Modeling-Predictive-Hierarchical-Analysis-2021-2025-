@@ -4,7 +4,7 @@ This project analyzes and predicts A&E 4-hour breach performance across NHS trus
 
 The analysis combines predictive modeling with statistical rigor to move beyond forecasting toward system-level insight.
 
-🎯 Objectives
+Objectives
 
 Predict A&E 4-hour breach percentage using historical trust-level data
 
@@ -16,8 +16,8 @@ Account for hierarchical structure across NHS trusts
 
 Provide interpretable, operationally meaningful insights
 
-🧠 Methodology
-1️⃣ Data Preparation
+Methodology
+Data Preparation
 
 Cleaned trust-level NHS A&E data (2021–2025)
 
@@ -33,7 +33,7 @@ Log_Total_Attendances
 
 Created target variable: Over4hr_Percentage
 
-2️⃣ Temporal Validation Strategy
+Temporal Validation Strategy
 
 Train: 2021–2023
 
@@ -43,7 +43,7 @@ Preserves real-world forecasting conditions
 
 Prevents data leakage
 
-3️⃣ Models Compared
+Models Compared
 
 Linear Regression
 
@@ -57,7 +57,7 @@ Neural Network (MLP)
 
 Hyperparameter tuning and cross-validation were applied where appropriate.
 
-📊 Results
+Results
 Model	Test R²	RMSE
 Linear / Regularized	~0.80	~6.52
 Gradient Boosting	0.83	6.15
@@ -66,7 +66,7 @@ Random Forest	0.85	5.71
 
 Random Forest achieved the strongest generalization performance, indicating meaningful nonlinear structure in A&E congestion dynamics.
 
-🔎 Key Findings
+Key Findings
 
 Emergency admission rate is the dominant driver (~83% feature importance).
 
@@ -80,7 +80,7 @@ Interaction testing did not show significant amplification effects between sever
 
 These results suggest that A&E congestion is primarily driven by admission pressure and downstream bed capacity constraints rather than sheer demand volume.
 
-📐 Advanced Statistical Layer
+Advanced Statistical Layer
 
 To account for clustering within trusts, a multilevel mixed-effects model was implemented:
 
@@ -92,7 +92,7 @@ Highlighted differences between cross-sectional and within-trust effects
 
 This ensures both predictive strength and statistical robustness.
 
-🛠 Tools & Libraries
+Tools & Libraries
 
 Python
 
@@ -104,7 +104,7 @@ statsmodels
 
 matplotlib
 
-🚀 Skills Demonstrated
+Skills Demonstrated
 
 Time-aware train–test validation
 
@@ -120,6 +120,6 @@ Multilevel (hierarchical) modeling
 
 Healthcare systems analytics
 
-📌 Conclusion
+Conclusion
 
 This project demonstrates an end-to-end data science workflow applied to real-world healthcare performance data. By combining machine learning with hierarchical statistical modeling, it delivers both strong predictive accuracy and actionable system-level insights into the structural drivers of A&E congestion.
